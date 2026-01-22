@@ -85,11 +85,49 @@ kubectl rollout undo deployment/app --to-revision=$CURRENT_REVISION
 
 ## Secrets Management
 
-| Secret | Source | Never Do |
-|--------|--------|----------|
-| `GITHUB_TOKEN` | Auto-provided | Hardcode tokens |
-| `SONAR_TOKEN` | GitHub Secrets | Commit to repo |
-| `SLACK_WEBHOOK_URL` | GitHub Secrets | Log secrets |
+### Repository vs Environment Secrets
+
+| Type | Scope | Use Case |
+|------|-------|----------|
+| Repository Secrets | All workflows | `SONAR_TOKEN`, `SLACK_WEBHOOK_URL` |
+| Environment Secrets | Per environment | `KUBECONFIG` (different per cluster) |
+
+### GitHub Environments Pattern
+
+```yaml
+deploy-dev:
+  environment:
+    name: development    # ← Scopes secrets to this environment
+  steps:
+    - run: echo "${{ secrets.KUBECONFIG }}" | base64 -d > ~/.kube/config
+      # ↑ Uses KUBECONFIG from 'development' environment
+```
+
+**Why Environment Secrets?**
+- Same secret name (`KUBECONFIG`), different value per environment
+- Production can require manual approval before secrets are exposed
+- Clear separation between dev/staging/prod credentials
+
+### Setting Up Environment Secrets
+
+```bash
+# Base64 encode kubeconfig (required for multi-line secrets)
+base64 -w 0 ~/.kube/dev-config > dev.b64
+
+# Set per-environment secret
+gh secret set KUBECONFIG --env development --body "$(cat dev.b64)"
+gh secret set KUBECONFIG --env staging --body "$(cat staging.b64)"
+gh secret set KUBECONFIG --env production --body "$(cat prod.b64)"
+```
+
+### Security Best Practices
+
+| Practice | Why |
+|----------|-----|
+| Never hardcode secrets | Use `${{ secrets.NAME }}` |
+| Base64 encode multi-line | GitHub secrets don't preserve newlines well |
+| Rotate every 90 days | Limit blast radius of leaked credentials |
+| Least privilege | Service accounts with minimal permissions |
 
 ## Commands Learned
 ```bash
