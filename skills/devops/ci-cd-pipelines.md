@@ -129,6 +129,15 @@ gh secret set KUBECONFIG --env production --body "$(cat prod.b64)"
 | Rotate every 90 days | Limit blast radius of leaked credentials |
 | Least privilege | Service accounts with minimal permissions |
 
+### Checkov Compliance Fixes
+
+| Check | Issue | Fix |
+|-------|-------|-----|
+| CKV_DOCKER_3 | No user created in Dockerfile | Add `USER appuser` (non-root) |
+| CKV_DOCKER_2 | No HEALTHCHECK | Add `HEALTHCHECK CMD curl -f http://localhost:5000/` |
+| CKV_SECRET_4/6 | Hardcoded secrets in docker-compose | Use `${VAR:-default}` pattern |
+| CKV2_GHA_1 | Top-level permissions too broad | Add `permissions: contents: read` |
+
 ## Commands Learned
 ```bash
 # Trigger workflow manually
@@ -139,4 +148,7 @@ gh run list
 
 # View specific run logs
 gh run view <run-id> --log
+
+# Run Checkov locally
+checkov -d . --framework dockerfile,github_actions
 ```
