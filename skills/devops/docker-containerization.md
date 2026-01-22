@@ -6,21 +6,69 @@
 ## Skills Demonstrated
 
 ### Docker
-- Writing Dockerfiles for Python/Flask applications
-- Multi-stage builds and image optimization
-- Development vs production Dockerfile configurations
+
+| Skill | Why It Matters |
+|-------|---------------|
+| Writing Dockerfiles for Python/Flask | Ensures consistent environments across dev/staging/prod |
+| Multi-stage builds | Reduces image size by 80%+, removes build tools from production |
+| Development vs production configs | Dev has hot-reload & debug tools; prod is minimal & secure |
+
+### Multi-Stage Build Benefits
+
+```dockerfile
+# Stage 1: Builder - has gcc, build tools
+FROM python:3.11-slim AS builder
+# Stage 2: Production - only runtime deps
+FROM python:3.11-slim AS production
+COPY --from=builder /root/.local /home/appuser/.local
+```
+
+**Why?**
+- **Smaller images**: ~150MB vs ~800MB (faster pulls, less storage)
+- **Security**: No compilers = smaller attack surface
+- **Compliance**: Fewer packages = fewer CVEs to patch
+
+### Security Best Practices
+
+| Practice | Implementation | Reason |
+|----------|---------------|--------|
+| Non-root user | `USER appuser` (UID 1000) | Container escape won't have root privileges |
+| Slim base image | `python:3.11-slim` | ~50 packages vs ~400 in full image |
+| No pip cache | `--no-cache-dir` | Saves ~50MB, no stale cache issues |
+| Apt cleanup | `rm -rf /var/lib/apt/lists/*` | Removes package index (~30MB) |
 
 ### Docker Compose
-- Multi-container orchestration (Flask API + PostgreSQL)
-- Environment variable configuration
-- Health checks and service dependencies
-- Volume management for data persistence
-- Development and production compose configurations
+
+| Skill | Why It Matters |
+|-------|---------------|
+| Multi-container orchestration | Single command starts entire stack |
+| Environment variables with defaults | `${VAR:-default}` allows override without code changes |
+| Health checks | Kubernetes/orchestrators know when app is truly ready |
+| Service dependencies | `condition: service_healthy` prevents race conditions |
+| Volume management | Data persists across container restarts |
+
+### Health Checks - Why They're Critical
+
+```yaml
+healthcheck:
+  test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+  interval: 30s
+  timeout: 10s
+  retries: 3
+```
+
+**Benefits:**
+- Load balancers only route to healthy instances
+- Orchestrators auto-restart failed containers
+- Rolling deployments wait for new pods to be healthy
 
 ### Troubleshooting
-- Resolving Python package version conflicts (Flask/Werkzeug compatibility)
-- Fixing Python import paths for containerized applications
-- Debugging container startup issues using `docker logs`
+
+| Issue | Solution | Learning |
+|-------|----------|----------|
+| Flask/Werkzeug version conflicts | Pin versions in requirements.txt | Always lock dependencies |
+| Python import path errors | Set `WORKDIR` and `PYTHONPATH` correctly | Container paths differ from local |
+| Container startup failures | `docker logs -f <container>` | Always check logs first |
 
 ## Key Files
 - `docker/Dockerfile` - Production Dockerfile
