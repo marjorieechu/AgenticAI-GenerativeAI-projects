@@ -2,5 +2,6 @@
 .env.*
 !.env.example
 data/session.db
+**/data/session.db
 __pycache__/
 *.pyc
