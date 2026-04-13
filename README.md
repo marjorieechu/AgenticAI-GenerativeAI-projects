@@ -1,10 +1,10 @@
-# Agentic AI and Generative AI Projects
+# Agentic AI Projects
 
 The repo serves as proof-of-work space for agentic AI.
 
 It documents my learning journey from my course materials, build small and medium projects, and gradually move from simple single-agent experiments into production-minded agent workflows that fit real software and DevOps environments.
 
-## Why This Repo Exists
+## Objectives
 
 My current goal is not just to finish tutorials. It is to show visible progress in:
 
@@ -33,16 +33,16 @@ Those materials are being translated here into cleaner notes, skills documentati
 ## Repository Structure
 
 - `projects/` contains hands-on builds and experiments
-- `skills/` contains framework notes, definitions, comparisons, and implementation guidance
+- `ai-tools-skills/` contains framework notes, definitions, comparisons, and implementation guidance
 
 ## Skills Covered
 
-- `skills/Autogen-framework/` for Microsoft AutoGen concepts and multi-agent collaboration
-- `skills/CrewAI-FrameWork/` for crews, flows, and agent orchestration
-- `skills/LangGraph-Framework/` for graph-based orchestration and stateful agents
-- `skills/MCP/` for the Model Context Protocol and tool/context interoperability
-- `skills/N8N/` for low-code AI workflow automation
-- `skills/RAG/` for retrieval-augmented generation patterns
+- `ai-tools-skills/Autogen-framework/` for Microsoft AutoGen concepts and multi-agent collaboration
+- `ai-tools-skills/CrewAI-FrameWork/` for crews, flows, and agent orchestration
+- `ai-tools-skills/LangGraph-Framework/` for graph-based orchestration and stateful agents
+- `ai-tools-skills/MCP/` for the Model Context Protocol and tool/context interoperability
+- `ai-tools-skills/N8N/` for low-code AI workflow automation
+- `ai-tools-skills/RAG/` for retrieval-augmented generation patterns
 
 ## Project Roadmap
 
