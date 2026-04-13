@@ -1,0 +1,43 @@
+{
+  "product_prompt": "Launch campaign for a new eco-friendly water bottle in Bali",
+  "ideas": [
+    "'Refill the Island' - A Bali-wide campaign positioning the bottle as the daily companion for beachgoers, surfers, yogis, and travelers. Pop-up refill stations at beaches, cafes, and co-working spaces invite people to 'refill for free, leave no trace,' with a map-driven social campaign encouraging users to collect stamps across Bali's most iconic spots.",
+    "'Carry the Clean Ocean' - A launch tied to Bali's plastic-free beach movement, featuring a sleek bottle made from recycled materials and an activation where every bottle sold funds a shoreline cleanup. The campaign visual shows the bottle as a symbol of keeping Bali's waters clear, with dramatic split imagery of polluted vs. pristine beaches.",
+    "'Hydrate Like a Local' - A culturally grounded campaign that pairs the bottle with Bali's wellness and outdoor lifestyle. Collaborations with local yoga studios, surf schools, and rice terrace hikes present the bottle as essential gear for an active day in paradise, supported by influencer content and place-based OOH around Canggu, Ubud, and Seminyak.",
+    "'From Sunrise to Sunset' - A lifestyle-led launch following one bottle through a full Bali day: sunrise at the beach, mid-morning at a cafe, afternoon on a scooter, sunset at a beach club. The campaign highlights durability, temperature retention, and portability while making the bottle feel like a stylish travel essential for both locals and tourists.",
+    "'Bring Your Own Bali' - A behavior-change campaign encouraging visitors to pack the bottle before arriving and use it across the island. Airport, hotel, and travel-partner messaging frames it as part of responsible tourism, while a digital pledge and ambassador program reward users for avoiding single-use plastics throughout their stay."
+  ],
+  "top_campaigns": [
+    "'Refill the Island' - A Bali-wide campaign positioning the bottle as the daily companion for beachgoers, surfers, yogis, and travelers. Pop-up refill stations at beaches, cafes, and co-working spaces invite people to 'refill for free, leave no trace,' with a map-driven social campaign encouraging users to collect stamps across Bali's most iconic spots.",
+    "'Hydrate Like a Local' - A culturally grounded campaign that pairs the bottle with Bali's wellness and outdoor lifestyle. Collaborations with local yoga studios, surf schools, and rice terrace hikes present the bottle as essential gear for an active day in paradise, supported by influencer content and place-based OOH around Canggu, Ubud, and Seminyak."
+  ],
+  "reasoning": "'Refill the Island' is the strongest because it is highly differentiated and action-oriented: the refill-station concept makes the sustainability message tangible, creates a useful utility for travelers and locals, and naturally generates social sharing through the stamp and map mechanic. 'Hydrate Like a Local' is the best second choice because it is easy to execute through partnerships, strongly relevant to Bali's core lifestyle segments, and versatile enough to work across wellness, surf, and tourism audiences. The other ideas are solid but less distinctive or more dependent on heavier brand storytelling: 'Carry the Clean Ocean' is purpose-led but more conventional, 'From Sunrise to Sunset' is broad but less ownable, and 'Bring Your Own Bali' is strategically sound yet harder to activate as a launch campaign without stronger on-ground hooks.",
+  "tweets": [
+    "Bali runs on sunshine, surf, and good intentions. Introducing the eco-friendly bottle built for beach days, co-working breaks, and every refill in between. Refill the island. Leave no trace. #RefillTheIsland #Bali",
+    "Free refill stations. Island-wide map. One bottle made to move with you from Canggu to Ubud to the coast. Collect stamps, stay hydrated, and help keep Bali beautiful. #RefillTheIsland",
+    "Hydrate like a local: from sunrise yoga to post-surf coconut runs, this bottle is designed for Bali's active days and low-impact lifestyle. Your daily carry for paradise. #HydrateLikeALocal"
+  ],
+  "channel_plan": {
+    "twitter": [
+      "Announce refill station locations as a recurring content series and tie each post to a map checkpoint or community challenge.",
+      "Use creator-led before and after beach-day content that shows the bottle moving from surf to cafe to wellness routines.",
+      "Turn stamp collection into a repeatable hashtag mechanic that rewards user-generated photos from Bali landmarks."
+    ],
+    "linkedin": [
+      "Position the launch as a sustainable tourism partnership story across cafes, co-working hubs, yoga studios, and surf schools.",
+      "Highlight the operational side of refill infrastructure and brand collaboration as a case study in eco-conscious destination marketing."
+    ],
+    "email": [
+      "Send a launch email built around a Bali refill guide with partner locations, campaign story, and a clear product CTA.",
+      "Create a follow-up nurture email for travelers featuring local lifestyle itineraries tied to refill stops and low-waste habits."
+    ],
+    "short_video": [
+      "Cut a day-in-the-life Bali edit from sunrise beach setup through co-working, scooter travel, and sunset, with the bottle as the constant utility item.",
+      "Film short creator sequences at yoga studios, surf schools, and rice terraces to show how 'Hydrate Like a Local' fits real routines."
+    ]
+  },
+  "model": "gpt-5.4-mini",
+  "workflow_name": "Creative Advertising AI Agent Team",
+  "session_enabled": true,
+  "session_id": "bali-launch"
+}

@@ -29,6 +29,11 @@ A multi-agent system is not automatically better than a single agent. This proje
 
 This is still an early-stage project. The main value right now is understanding the pattern, not claiming production readiness.
 
+## Available Scaffolds
+
+- `ci-failure-triage-agent` for a structured DevOps-oriented multi-step analysis workflow
+- `creative-advertising-ai-agent-team` for a role-based marketing pipeline with idea generation, campaign selection, and copywriting
+
 ## Good Next Upgrade Paths
 
 1. Add a planner agent and a worker agent

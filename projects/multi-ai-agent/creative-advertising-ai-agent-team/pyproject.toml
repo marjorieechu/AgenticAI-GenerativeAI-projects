@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "creative-advertising-ai-agent-team"
+version = "0.1.0"
+description = "Multi-agent creative advertising pipeline scaffold using the OpenAI Agents SDK."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents>=0.13.6",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.12.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
