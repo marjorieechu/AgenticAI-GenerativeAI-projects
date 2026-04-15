@@ -33,6 +33,7 @@ This is still an early-stage project. The main value right now is understanding 
 
 - `ci-failure-triage-agent` for a structured DevOps-oriented multi-step analysis workflow
 - `creative-advertising-ai-agent-team` for a role-based marketing pipeline with idea generation, campaign selection, and copywriting
+- `guardrailed-tool-use-agent` for an access-controlled workflow where an agent decides when to use search or external tools without overreaching into sensitive information
 
 ## Good Next Upgrade Paths
 
