@@ -33,7 +33,9 @@ This is still an early-stage project. The main value right now is understanding 
 
 - `ci-failure-triage-agent` for a structured DevOps-oriented multi-step analysis workflow
 - `creative-advertising-ai-agent-team` for a role-based marketing pipeline with idea generation, campaign selection, and copywriting
-- `guardrailed-tool-use-agent` for an access-controlled workflow where an agent decides when to use search or external tools without overreaching into sensitive information
+- `guardrailed-tool-handoff-agent` for an access-controlled workflow where an agent decides when to use search or external tools without overreaching into sensitive information
+- `autogen-devops-war-room` for a three-agent AutoGen group chat with a human operator in a DevOps incident-response context
+- `autogen-devops-war-room` for an AutoGen group chat incident-response team that includes a human operator and optional mixed-model roles
 
 ## Good Next Upgrade Paths
 

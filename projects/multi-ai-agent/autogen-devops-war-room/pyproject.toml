@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autogen-devops-war-room"
+version = "0.1.0"
+description = "AutoGen DevOps group chat scaffold with three AI agents and a human operator."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "autogen-agentchat>=0.4.8",
+    "autogen-ext[openai]>=0.4.8",
+    "autogen-ext[anthropic]>=0.4.8",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
