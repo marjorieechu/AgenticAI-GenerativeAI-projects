@@ -4,6 +4,8 @@ LangGraph is a low-level orchestration framework for building long-running, stat
 
 The current LangGraph documentation emphasizes durable execution, streaming, human-in-the-loop control, and memory for advanced agent systems.
 
+LangGraph is low level primitive because it provides the flexibility needed to create fully customizable agents with diverse control flows (single, multi-agent hierarchical). It is thus abit more difficult to build.
+
 ## Why It Matters
 
 LangGraph is a strong choice when I need precise control over:
@@ -16,9 +18,11 @@ LangGraph is a strong choice when I need precise control over:
 
 ## Core Concepts
 
-- graph-based workflows
-- explicit state
-- nodes and edges
+- graph-based workflows : stores inputs and outputs and has access to all variables
+- stage graph : core object to build the workflow ; accessibilty to all inputs, outputs and variables.
+- explicit state : info that persist across nodes
+- nodes : include the code(function) to execute. they could be multiple nodes in a graph
+- edges : it determines which node to execute next. the `conditional edge` determines whcih node to execute next based on if elif conditions
 - deterministic plus agentic execution
 - durable execution for longer tasks
 

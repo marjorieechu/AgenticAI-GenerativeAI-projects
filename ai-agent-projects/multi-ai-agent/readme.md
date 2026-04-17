@@ -1,50 +1,31 @@
 # Multi-AI-Agent
 
-These projects explore how more than one agent can collaborate on a task.
+This folder is the main host area for multi-agent and DevOps-oriented agent projects from the later parts of the course archive.
 
-It builds on the single-agent baseline and moves toward orchestration patterns where agents can divide responsibilities, exchange outputs, and complete a workflow together.
+## Capstone Project Titles
 
-## Goal
+- `langgraph-incident-command-graph`
+Stateful incident-response workflow with graph orchestration, review steps, and escalation paths.
 
-Experiment with multi-agent coordination and understand when multiple specialized agents are better than one general agent.
+- `crewai-release-readiness-crew`
+Role-based delivery crew for change risk, test health, deployment readiness, and rollback planning.
 
-## Focus Areas
+- `mcp-devops-context-server`
+MCP-based context layer exposing runbooks, CI logs, deployment notes, and repo resources to agents.
 
-- task decomposition
-- role specialization
-- handoffs between agents
-- response aggregation
-- limits of naive multi-agent setups
+- `n8n-devops-escalation-pipeline`
+Operational workflow that summarizes incidents, routes alerts, and updates downstream systems.
 
-## Why This Project Matters
+- `ollama-runtime-deployment-agent`
+Practical DevOps project for deploying an Ollama runtime, loading the selected model, exposing it securely to `Connect-ai-service`, and documenting validation plus rollback.
 
-A multi-agent system is not automatically better than a single agent. This project helps answer practical questions such as:
+## Existing Working Scaffolds
 
-- when should work be split across agents
-- how should responsibilities be assigned
-- how does context move between agents
-- what kind of orchestration is needed to keep output coherent
+- `guardrailed-tool-handoff-agent`
+- `autogen-devops-war-room`
+- `creative-advertising-ai-agent-team`
+- `langgraph-incident-command-graph`
 
-## Current Direction
+## Portfolio Direction
 
-This is still an early-stage project. The main value right now is understanding the pattern, not claiming production readiness.
-
-## Available Scaffolds
-
-- `ci-failure-triage-agent` for a structured DevOps-oriented multi-step analysis workflow
-- `creative-advertising-ai-agent-team` for a role-based marketing pipeline with idea generation, campaign selection, and copywriting
-- `guardrailed-tool-handoff-agent` for an access-controlled workflow where an agent decides when to use search or external tools without overreaching into sensitive information
-- `autogen-devops-war-room` for a three-agent AutoGen group chat with a human operator in a DevOps incident-response context
-- `autogen-devops-war-room` for an AutoGen group chat incident-response team that includes a human operator and optional mixed-model roles
-
-## Good Next Upgrade Paths
-
-1. Add a planner agent and a worker agent
-2. Introduce structured outputs between agents
-3. Add tool access for one or more agents
-4. Add memory or retrieval for shared context
-5. Rebuild the flow using LangGraph or CrewAI for stronger orchestration
-
-## Portfolio Value
-
-This project helps transition from prompt-based experiments into actual agent system design.
+These projects position the repo as a work-in-progress AI engineering portfolio focused on orchestration, automation, and DevOps-aligned agent systems.

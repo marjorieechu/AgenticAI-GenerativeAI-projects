@@ -26,49 +26,11 @@ What it proves:
 - agent collaboration patterns
 - a stepping stone toward orchestrated workflows
 
-### ci-failure-triage-agent
-
-A DevOps-focused baseline for analyzing CI failures.
-
-What it proves:
-
-- practical AI workflow design around software delivery
-- structured classification and recommendation output
-- a clear path from heuristics into agentic orchestration, RAG, and GitHub automation
-
 ## Recommended Next Builds
 
 These are the strongest next projects for this repo because they are practical, portfolio-friendly, and aligned with real engineering workflows.
 
-### 1. CI Failure Triage Agent
-
-Input:
-
-- GitHub Actions logs
-- failing test summaries
-- commit metadata
-
-Output:
-
-- likely failure category
-- suspected root cause
-- suggested next action
-- draft issue or Slack summary
-
-Why it matters:
-
-- connects AI directly to DevOps operations
-- easy to demo with GitHub Actions
-- can start simple and grow into a multi-agent workflow
-
-Suggested stack:
-
-- OpenAI Agents SDK or LangGraph
-- GitHub API
-- structured output
-- optional MCP server for repository context
-
-### 2. DevOps Runbook RAG Assistant
+### 1. DevOps Runbook RAG Assistant
 
 Input:
 
@@ -96,7 +58,7 @@ Suggested stack:
 - retrieval pipeline
 - optional LangGraph for answer and verification flow
 
-### 3. Incident Response Multi-Agent Workflow
+### 2. Incident Response Multi-Agent Workflow
 
 Agent roles:
 
@@ -117,7 +79,7 @@ Suggested stack:
 - structured JSON outputs
 - optional dashboard or CLI
 
-### 4. Ticket Review And Triage Agent
+### 3. Ticket Review And Triage Agent
 
 Input:
 
@@ -147,7 +109,7 @@ Suggested stack:
 - GitHub API or Jira API
 - optional RAG for ticket standards and team playbooks
 
-### 5. AI Release Notes and Change Summary Agent
+### 4. AI Release Notes and Change Summary Agent
 
 Input:
 
@@ -167,7 +129,7 @@ Why it matters:
 - fast to build
 - useful for personal and team workflows
 
-### 6. n8n Ops Automation Assistant
+### 5. n8n Ops Automation Assistant
 
 Workflow ideas:
 
