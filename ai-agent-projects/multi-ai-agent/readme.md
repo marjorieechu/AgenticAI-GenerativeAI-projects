@@ -7,6 +7,9 @@ This folder is the main host area for multi-agent and DevOps-oriented agent proj
 - `langgraph-incident-command-graph`
 Stateful incident-response workflow with graph orchestration, review steps, and escalation paths.
 
+- `langgraph-pr-and-ticket-review-readiness-agent`
+Moderate-scope DevOps LangGraph project for validating PR and ticket checklist readiness before human review handoff.
+
 - `crewai-release-readiness-crew`
 Role-based delivery crew for change risk, test health, deployment readiness, and rollback planning.
 
